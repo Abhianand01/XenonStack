@@ -1,0 +1,45 @@
+<section id="subHead">
+    
+    <div class="subHeader">
+  
+  
+      <div class="leftHead">
+        <div class="projTitle">
+          <h2>CAP</h2>
+        </div>
+      </div>  
+      <div class="middleHead">
+          <div class="midLeft">
+            <h2>Dashboard</h2>
+          </div>
+          <div class="midRight">
+            <div class="searchBar">
+              <i class="fa-solid fa-magnifying-glass" style="color: #dadada"></i>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+      </div>
+  
+      <div class="rightHead">
+          <div class="profileContainer">
+      
+              <div class="profile">
+                <div class="userName">
+                  <h4><%= data[0].name %></h4>
+                </div>
+                <div class="userImage">
+                  <img src="/static/assets/images/user.jpg" alt="" />
+                </div>
+              </div>
+        
+              <div class="logoutIcon">
+                <button type="submit" id="<%= data[0].role %>Logout" onclick="logout">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+              </div>
+          </div>
+      
+      </div>
+    </div>
+  
+  </section>
