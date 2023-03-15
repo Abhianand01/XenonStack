@@ -1,0 +1,247 @@
+<%- include('Partials/header.ejs') -%>
+
+        <div class="student">
+            <div class="titleProj">
+                <h1>Continuous Assessment Process</h1>
+            </div>
+                <div class="btncontainer">
+                    <button class="stud">Contact Us</button>
+                    <button class="teach">Teacher</button>
+                </div>
+            <div class="overlay"></div>
+
+            <div  id="studbox">
+
+                <!-- Login Goes Here -->
+                <div class="one">  
+                    <!-- login Form left  -->
+                    <div class="loginForm">
+                        <h2 class="formTitle">CONTACT US</h2>
+                        <form action="/student/login" method="post">
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input required type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name">
+                                <p class="small" id="ewar"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input required type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email">
+                                <p class="small" id="ewar"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Mobile No.">Mobile No.</label>
+                                <input required type="tel" name="mobile" class="form-control" id="email" placeholder="Enter Your Mobile No.">
+                                <p class="small" id="ewar"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Message">Message</label>
+                                <input required type="text" name="message" class="form-control" id="message" placeholder="Enter Your Message">
+                                <p class="small" id="uwar"></p>
+                            </div>
+                            <div class="loginBtnContainer">
+                                <!-- <button id="log" type="submit">Login</button> -->
+                                <button id="log" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- loginImageOne right -->
+                    <div class="loginimageone">
+                        <img src="static/assets/images/login.jpg" alt="">
+                    </div>
+
+                    <!-- loginImageOne -->
+
+                </div>
+
+                <!-- Register Goes Here  -->
+                <div class="two">
+                    
+                    <!-- loginImage left -->
+                    <div class="loginimage">
+                        <img src="static/assets/images/signup.jpg" alt="">
+                    </div>
+
+                    <!-- Register form right  -->
+                    <div class="twoone"">
+                        <h2 class="formTitle">Register</h2>
+                        <form action="/student/register" method="post">
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input required type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input required type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input required type="password" name="password" class="form-control" id="password" placeholder="Enter Your Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="roll">Roll</label>
+                                <input required type="number" name="roll" class="form-control" id="roll" placeholder="Enter Your Roll No.">
+                            </div>
+                            <div class="dropdown">
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <!-- <input required  type="text" name="department" class="form-control" id="department"> -->
+                                    <select id="department" name="department" required>
+                                        <option value="" selected disabled>None</option>
+                                        <option value="CSE">CSE</option>
+                                        <option value="IT">IT</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="CE">CE</option>
+                                      </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="semester">Semester</label>
+                                    <!-- <input required  type="number" name="semester" class="form-control" id="semester"> -->
+                                    <select id="semester" name="semester" required>
+                                        <option value="" selected disabled>~None~</option>
+                                        <option value=1>1</option>
+                                        <option value=2>2</option>
+                                        <option value=3>3</option>
+                                        <option value=4>4</option>
+                                        <option value=5>5</option>
+                                        <option value=6>6</option>
+                                        <option value=7>7</option>
+                                        <option value=8>8</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="number">Number</label>
+                                <input required type="tel" name="Number" class="form-control" id="number" placeholder="Phone Number">
+                            </div>
+                            <div class="loginBtnContainer regBtn">
+                                <button type="submit" id="regBtn">Register</button>
+                                <button type="button" id="logBtn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    
+                </div>
+                <button id="clo"><i class="fa fa-close" ></i></button>
+
+            </div>
+
+            <!-- teacherHere -->
+            <div  id="teachbox">
+
+
+                <div class="one">  
+                    <!-- login Form left  -->
+                    <div class="loginForm">
+                        <h2 class="formTitle">Login</h2>
+                        <form action="/teacher/login" method="post">
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input required type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email">
+                                <p class="small" id="ewar"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input required type="password" name="password" class="form-control" id="password" placeholder="Enter Your Password">
+                                <p class="small" id="uwar"></p>
+                            </div>
+                            <div class="loginBtnContainer">
+                                <button id="teachlog" type="submit">Login</button>
+                                <button id="teachreg" type="button">Register</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- loginImageOne right -->
+                    <div class="loginimageone">
+                        <img src="static/assets/images/login.jpg" alt="">
+                    </div>
+
+                    <!-- loginImageOne -->
+
+                </div>
+
+                <!-- Register Goes Here  -->
+                <div class="two">
+                    
+                    <!-- loginImage left -->
+                    <div class="loginimage">
+                        <img src="static/assets/images/signup.jpg" alt="">
+                    </div>
+
+                    <!-- Register form right  -->
+                    <div class="twoone"">
+                        <h2 class="formTitle">Register</h2>
+                        <form action="/teacher/register" method="post">
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input required type="text" name="name" class="form-control" id="teachName" placeholder="Enter Your Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input required type="email" name="email" class="form-control" id="teachEmail" placeholder="Enter Your Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input required type="password" name="password" class="form-control" id="teachPassword" placeholder="Enter Your Password">
+                            </div>
+
+                            <div class="dropdown">
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <!-- <input required  type="text" name="department" class="form-control" id="teachdepartment"> -->
+                                    <select id="teachDepartment" name="department" required>
+                                        <option value="" selected disabled>None</option>
+                                        <option value="CSE">CSE</option>
+                                        <option value="IT">IT</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="CE">CE</option>
+                                      </select>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="number">Number</label>
+                                <input required type="tel" name="Number" class="form-control" id="teachNumber" placeholder="Phone Number">
+                            </div>
+                            <div class="loginBtnContainer regBtn">
+                                <button type="submit" id="teachregBtn">Register</button>
+                                <button type="button" id="teachlogBtn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    
+                </div>
+
+                <button id="tclo"><i class="fa fa-close" ></i></button>
+
+
+                <!-- <div class="one">
+                    <button class="btn btn-warning mt-2" id="tclo"><i class="fa fa-close" ></i></button>
+                    <h3 class="text-center pt-3">Enter Details</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="username">username</label>
+                            <input required type="text" name="" class="form-control" id="username">
+                            <p class="small" id="uwar"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input required type="email" name="" class="form-control" id="email">
+                            <p class="small" id="ewar"></p>
+                        </div>
+                        <input required type="button" value="submit" class="btn btn-primary mt-5" id="sub">
+                    </form>
+                </div> -->
+            </div>
+        </div>
+        
+    </body>
+
+    <%- include('Partials/footer.ejs') -%>

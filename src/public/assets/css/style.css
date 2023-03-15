@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora';
+}
+body{
+  background-color: #ffffff;
+}
+.dummy{
+    text-align: center;
+}
+
+.student{
+    background-image: url(../images/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 86vh;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay.show::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.301);
+    content: '';
+    top: 0;
+    left: 0;
+}
+.titleProj h1{
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: rgba(6, 56, 114, 0.919);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fcfbfc;
+    padding: 0.5em 3em;
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 10;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  }
+.logo{
+    display: flex;
+}
+.logo img{
+    height: 80px;
+    padding: 5px;
+}
+.logo h3{
+    margin-top: 2px;
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.stud,.teach{
+    background: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
+    margin: 10px;
+}
+.stud:hover,.teach:hover{
+    background: white;
+    color: #000;
+    transition: 0.2s;
+}
+.stud:active,.teach:active{
+    opacity: 0.5;
+}
+#teachbox,#studbox{
+    min-height: 500px;
+    width: 800px;
+    visibility: hidden;
+    position: fixed;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 2px 5px 2px 2px rgba(33, 46, 189, 0.323);
+    padding: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* all login details goes here */
+.one, .two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.one .loginForm{
+    flex: 1;
+    vertical-align: middle;
+}
+.one .loginimageone img, .two .loginimage img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.one .loginimageone, .two .loginimage{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.two .loginimage, .two .twoone{
+    flex: 1;
+}
+
+
+.twoone.regj,.loginimageone.regj{
+    visibility: visible;
+}
+
+#studbox.show,#teachbox.show{
+    visibility: visible;
+    animation: fade-in .2s forwards;
+}
+#clo,#tclo{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 30px;
+    padding: 8px;
+    height: 30px;
+    cursor: pointer;
+}
+#log, #logBtn, #teachlog, #teachlogBtn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    flex: 1;
+    font-size: 14px;
+}
+#reg, #regBtn, #teachreg, #teachregBtn{
+    background-color: #102fdf;
+    color: white;
+    padding: 10px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.loginBtnContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #e6e6e6;
+    border: none;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  input:focus{
+    outline: none;
+  }
+
+  .dropdown{
+    display: flex;
+    justify-content: space-between;
+  }
+  select{
+    background-color: #e6e6e6;
+    padding: 5px;
+    border: none;
+  }
+  select:focus{
+    outline: none;
+  }
+  form, .form-group{
+    margin: 10px;
+  }
+  label, input::placeholder, button, option{
+    font-family: 'Nunito';
+  }
+  .formTitle{
+    display: block;
+    text-align: center;
+  }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+
+.card{
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 12px rgba(1, 41, 47, 0.226);
+    height: 50vh;
+    margin: 30px;
+    padding: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+td,th{
+    border: 1px solid #000;
+    text-align: left;
+    padding: 10px;
+}
+tr:nth-child(even) {
+    background-color: #ececec;
+  }
+
+
+/* Teacher Sub-Header Goes Here  */
+#subHead{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+    width: 100%;
+    z-index: 10;
+}
+
+#subHead .subHeader{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.126);
+    /* min-height: 86vh; */
+}
+#subHead .subHeader h2{
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 25px;
+}
+#subHead .subHeader .leftHead .projTitle{
+    text-align: center;
+}
+
+#subHead .subHeader .leftHead{
+    flex: .6;
+    /* border-right: .5px solid rgba(0, 0, 0, 0.145); */
+    background-color: #fcfbfc;
+    /* background-color: #000; */
+    /* position: sticky; */
+}
+
+ .sideNav ul li{
+   margin: 30px auto;
+   font-size: 20px;
+   color: #aeaeae;
+   font-family: 'Nunito';
+   cursor: pointer;
+   font-weight: 500;
+   padding: 8px 10px;
+   border-radius: 4px;
+}
+ .sideNav ul li.active{
+    background-color: #e9e3fe;
+    color: #000;
+}
+ .sideNav ul{
+    list-style: none;
+}
+
+ .sideNav{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    background-color: #fdfdff;
+
+}
+
+#subHead .subHeader .middleHead {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fcfbfc;
+}
+
+#subHead .subHeader .middleHead .searchBar{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 8px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(33, 46, 189, 0.07);
+}
+
+#subHead .subHeader .rightHead{
+    flex: .8;
+    background-color: #fcfbfc;
+}
+
+#subHead .subHeader .rightHead .userImage img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#subHead .subHeader .rightHead h4{
+    font-size: 18px;
+    font-family: 'Nunito';
+}
+
+#subHead .subHeader .rightHead .profileContainer .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+#subHead .subHeader .rightHead .userName, .userImage{
+    margin: 0 5px;
+}
+
+#subHead .subHeader .rightHead .profileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#subHead .subHeader .rightHead .logoutIcon button{
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+#subHead .subHeader input{
+    background: none;
+    box-shadow: none;
+    padding: 5px;
+}
+
+/* Dashboard css goes here  */
+
+#dashboard{
+    position: relative;
+    width: calc(100vw - 610px);
+    margin-left: 250px;
+}
+
+#dashboard .subjectContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+#dashboard .subjectContainer .subjectCard img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#dashboard .subjectContainer .subjectCard{
+    width: 180px;
+    height: 250px;
+    box-shadow: 0 5px 8px rgba(33, 46, 189, 0.101);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#dashboard .subjectCard h6{
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* right side navbar  */
+
+.rightSideNav{
+    /* width: 300px; */
+    position: fixed;
+    right: 0;
+    height: 100%;
+    /* border: 2px solid black; */
+    top: 9.7em;
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    width: 350px;
+    background-color: #fdfdff;
+}
+
+.logoutIcon button{
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
