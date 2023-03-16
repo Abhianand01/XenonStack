@@ -79,7 +79,7 @@ export const login = async (req, res) => {
 export const logout = async(req, res)=>{
   try{
     res.clearCookie("access_token");
-    res.redirect('https://sta-u04k.onrender.com');
+    res.send('/');
   }
   catch (error) {
     return res.send({
