@@ -50,7 +50,7 @@ $(document).ready(function(){
             method: 'POST',
             url: '/teacher/logout',
             success: function(){
-                window.location = 'http://localhost:3000/'
+                window.location = '/'
             }
         })
     })
