@@ -32,7 +32,7 @@ contactSchema.pre('save', async function(next){
 
 
 contactSchema.pre('save', async function(next){
-    if(/^[0]?[789]\d{9}$/.test(this.Number))
+    if(/^[0]?[789]\d{9}$/.test(this.mobile))
     {
         next();
     }
